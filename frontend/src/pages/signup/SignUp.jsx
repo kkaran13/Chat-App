@@ -24,21 +24,23 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
-      <div className="w-full p-6 rounded-lg shadow-md bg-gray-200 bg-clip-padding backdrop-filter backdrop-blur-none bg-opacity-10">
-        <h1 className="text-3xl font-semibold text-center text-gray-300">
+    <div className="flex flex-col items-center justify-center min-w-96 mx-auto bg-zinc-800 rounded-lg">
+      <div className="w-full p-6 rounded-lg shadow-md bg-clip-padding backdrop-filter backdrop-blur-none bg-opacity-10">
+        <h1 className="text-3xl font-semibold text-center text-gray-200">
           Sign Up to<span className="text-gray-300"> ChatApp</span>
         </h1>
 
         <form onSubmit={handleSubmit}>
           <div>
             <label className="label">
-              <span className="text-base label-text mt-4">Full Name</span>
+              <span className="text-base label-text mt-4 text-white">
+                Full Name
+              </span>
             </label>
             <input
               type="text"
               placeholder="Enter Full Name"
-              className="w-full input input-bordered h-10 text-white"
+              className="w-full input input-bordered h-10 text-white bg-zinc-700"
               value={inputs.fullName}
               onChange={(e) =>
                 setInputs({ ...inputs, fullName: e.target.value })
@@ -48,12 +50,12 @@ const SignUp = () => {
 
           <div>
             <label className="label p-2 ">
-              <span className="text-base label-text">Username</span>
+              <span className="text-base label-text text-white">Username</span>
             </label>
             <input
               type="text"
               placeholder="Enter Username"
-              className="w-full input input-bordered h-10 text-white"
+              className="w-full input input-bordered h-10 text-white bg-zinc-700"
               value={inputs.username}
               onChange={(e) =>
                 setInputs({ ...inputs, username: e.target.value })
@@ -63,12 +65,12 @@ const SignUp = () => {
 
           <div>
             <label className="label">
-              <span className="text-base label-text">Password</span>
+              <span className="text-base label-text text-white">Password</span>
             </label>
             <input
               type="password"
               placeholder="Enter Password"
-              className="w-full input input-bordered h-10 text-white"
+              className="w-full input input-bordered h-10 text-white bg-zinc-700"
               value={inputs.password}
               onChange={(e) =>
                 setInputs({ ...inputs, password: e.target.value })
@@ -78,12 +80,14 @@ const SignUp = () => {
 
           <div>
             <label className="label">
-              <span className="text-base label-text">Confirm Password</span>
+              <span className="text-base label-text text-white">
+                Confirm Password
+              </span>
             </label>
             <input
               type="password"
               placeholder="Confirm Password"
-              className="w-full input input-bordered h-10 text-white"
+              className="w-full input input-bordered h-10 text-white bg-zinc-700"
               value={inputs.confirmPassword}
               onChange={(e) =>
                 setInputs({ ...inputs, confirmPassword: e.target.value })
@@ -99,7 +103,7 @@ const SignUp = () => {
           <Link
             to={"/login"}
             className="text-sm hover:underline
-            mt-1 inline-block label-text"
+            mt-1 inline-block label-text text-white"
             href="#"
           >
             Already have an account?
@@ -107,11 +111,11 @@ const SignUp = () => {
 
           <div>
             <button
-              className="btn btn-block btn-sm mt-2 border border-slate-700"
+              className="btn btn-block btn-sm input-bordered mt-2 bg-zinc-700 hover:bg-zinc-600 hover:input-bordered text-white"
               disabled={loading}
             >
               {loading ? (
-                <span className="loading loading-spinner"></span>
+                <span className="loading loading-spinner text-white"></span>
               ) : (
                 "Sign Up"
               )}
