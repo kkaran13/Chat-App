@@ -1,14 +1,9 @@
-# Environment Variables Used in Chat-App
+# Environment Variables Report
+Scanned Branch: **main**
 
-Scanned branch: `main`
-
-## Variables Found
-- `DB`
-- `JWT_SECRET`
-- `MONGO_DB_URI`
-- `NODE_ENV`
-- `PORT`
-- `hours`
-- `minutes`
-- `selectedConversation._id`
-- `username`
+## /home/runner/work/markdown-automation/markdown-automation/scripts/scan_envs.py
+- `TARGET_BRANCH`
+- `encoding`
+- `errors`
+- `format`
+- `main`
